@@ -40,6 +40,15 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
+    # check for pigz program
+    if not subprocess.call("which pigz", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE) == 0:
+        raise Exception("Cannot find pigz program. Please install pigz (https://zlib.net/pigz/)")
+
+    # check for sed program
+    if not subprocess.call("which sed", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE) == 0:
+        raise Exception("Cannot find sed program. Please install sed (https://www.gnu.org/software/sed/)")
+
+    # check for input files
     if not os.path.exists(args.input_r1):
         raise Exception("Input R1 file " + str(args.input_r1) + " does not exist")
 
