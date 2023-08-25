@@ -17,7 +17,7 @@ Next, run the script providing:
 For example:
 
 ```
-python convert_aviti_10x.py -r1 test1.fq.gz -r2 test2.fq.gz --sample_name test
+python3 convert_aviti_10x.py -r1 test1.fq.gz -r2 test2.fq.gz --sample_name test
 ```
 
 This command will produce the files "test_S1_L001_R1_001.fastq.gz" and "test_S1_L001_R2_001.fastq.gz".
