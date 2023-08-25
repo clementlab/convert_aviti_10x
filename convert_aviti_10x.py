@@ -16,7 +16,7 @@ def prep_10x_from_aviti(input_r1_file, input_r2_file, sample_name, num_processes
     logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
     output_file_r1 = sample_name + "_S1_L001_R1_001.fastq.gz"
-    output_file_r2 = sample_name + "_S1_L001_R1_001.fastq.gz"
+    output_file_r2 = sample_name + "_S1_L001_R2_001.fastq.gz"
 
     if num_processes is None:
         num_processes = multiprocessing.cpu_count()
